@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login</title>
+<title>login</title>
 
 <!-- bootstrap 4.1.3  CSS -->
 <link type="text/css" rel="stylesheet" href="/resources/web/botstrap/css/bootstrap.min.css"/>
