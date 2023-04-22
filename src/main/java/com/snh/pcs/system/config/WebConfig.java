@@ -6,25 +6,27 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.core.Ordered;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
+	
 	@Override 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		
-		registry.addResourceHandler("/views").addResourceLocations("classpath:/static/views/").setCachePeriod(60 * 60 * 24 * 365); 
 		
 		/* addResourceHandler에 명시되어 호출하는 자원은 addResourceLocations 폴더 아래에서 찾는다. */ 
-	    registry.addResourceHandler("/web/bootstrap/css/**").addResourceLocations("classpath:/web/bootstrap/css/").setCachePeriod(60 * 60 * 24 * 365); 
-	    registry.addResourceHandler("/web/bootstrap/js/**").addResourceLocations("classpath:/web/bootstrap/js/").setCachePeriod(60 * 60 * 24 * 365); 
-	    registry.addResourceHandler("/web/js/**").addResourceLocations("classpath:/web/js/").setCachePeriod(60 * 60 * 24 * 365); 
-	    registry.addResourceHandler("/web/css/**").addResourceLocations("classpath:/web/css/").setCachePeriod(60 * 60 * 24 * 365); 
-	    registry.addResourceHandler("/web/img/**").addResourceLocations("classpath:/web/img/").setCachePeriod(60 * 60 * 24 * 365); 
-	    registry.addResourceHandler("/web/template/**").addResourceLocations("classpath:/web/template/").setCachePeriod(60 * 60 * 24 * 365); 
+	    registry.addResourceHandler("/bootstrap/css/**").addResourceLocations("classpath:/static/bootstrap/css/").setCachePeriod(60 * 60 * 24 * 365); 
+	    registry.addResourceHandler("/bootstrap/js/**").addResourceLocations("classpath:/static/bootstrap/js/").setCachePeriod(60 * 60 * 24 * 365); 
+	    registry.addResourceHandler("/js/**").addResourceLocations("classpath:/static/js/").setCachePeriod(60 * 60 * 24 * 365); 
+	    registry.addResourceHandler("/css/**").addResourceLocations("classpath:/static/css/").setCachePeriod(60 * 60 * 24 * 365); 
+	    registry.addResourceHandler("/img/**").addResourceLocations("classpath:/static/img/").setCachePeriod(60 * 60 * 24 * 365); 
+	    registry.addResourceHandler("/views/**").addResourceLocations("classpath:/templates/views/").setCachePeriod(60 * 60 * 24 * 365); 
 	}
 
 	
