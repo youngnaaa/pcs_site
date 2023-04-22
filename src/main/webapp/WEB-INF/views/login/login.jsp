@@ -1,12 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-	<title>Hello Hello</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!-- bootstrap 4.1.3  CSS -->
-	<link type="text/css" rel="stylesheet" href="/web/bootstrap/css/bootstrap.min.css"/>
-	<link type="text/css" rel="stylesheet" href="/web/bootstrap/js/bootstrap.min.js"/>
-	<link type="text/css" rel="stylesheet" href="/web/css/login.css"/>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<!-- bootstrap 4.1.3  CSS -->
+<link type="text/css" rel="stylesheet" href="/resources/web/botstrap/css/bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="/resources/web/bootstrap/js/bootstrap.min.js"/>
+<link type="text/css" rel="stylesheet" href="/resources/web/css/login.css"/>
 </head>
 <body>
 	<div class="login-wrap">
