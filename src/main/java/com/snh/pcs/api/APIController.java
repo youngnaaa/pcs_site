@@ -1,22 +1,19 @@
 package com.snh.pcs.api;
 
-import java.util.HashMap;
-
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@RestController
+@Controller
 public class APIController {
 
-	@RequestMapping(value = "/",method = {RequestMethod.GET, RequestMethod.POST})
-	public String main(@RequestParam HashMap<String,Object> param, Model model) throws Exception {
+	@GetMapping("/main")
+    public String hello(Model model) {
+        model.addAttribute("data", "hello!!");
 
-		return "/WEB-INF/views/login/login.jsp";
-	}
+        return "views/login.html";
+    }
 }
