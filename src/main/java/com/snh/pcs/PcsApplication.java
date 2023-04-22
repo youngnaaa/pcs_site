@@ -12,5 +12,4 @@ public class PcsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PcsApplication.class, args);
 	}
-//test
 }
