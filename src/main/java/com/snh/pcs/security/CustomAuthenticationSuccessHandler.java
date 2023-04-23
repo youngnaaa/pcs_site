@@ -1,4 +1,4 @@
-package com.snh.pcs.security.config;
+package com.snh.pcs.security;
 
 import java.io.IOException;
 

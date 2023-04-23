@@ -1,4 +1,4 @@
-package com.snh.pcs.security.config;
+package com.snh.pcs.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
