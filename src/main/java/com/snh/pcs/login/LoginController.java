@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/login")
 @Slf4j
 public class LoginController {
 
@@ -34,12 +34,12 @@ public class LoginController {
 		return new ResponseEntity(map, HttpStatus.OK);
 	}*/
 
-	@RequestMapping("/login/success")
+	@RequestMapping("/success")
     public String success() {
         return "/views/main.html";
     }
 	
-	@RequestMapping("/login/fail")
+	@RequestMapping("/fail")
     public String fail() {
         return "/views/login/fail.html";
     }

@@ -15,6 +15,11 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
+/**
+ * 로그인 인증 검증
+ * @author hyuna
+ *
+ */
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
 	@Autowired
@@ -36,6 +41,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 		System.out.println(">> user res Id :"+user.getUsername());
 		System.out.println(">> user res Password :"+user.getPassword());
 		
+		// req패스워드와 DB패스워드 불일치시 실패/성공 핸들러 이동 
 		if(!passwordEncoder.matches(reqPassword, user.getPassword())) throw new BadCredentialsException("Not Found User");
 		
 		return new UsernamePasswordAuthenticationToken(user, reqPassword, user.getAuthorities());

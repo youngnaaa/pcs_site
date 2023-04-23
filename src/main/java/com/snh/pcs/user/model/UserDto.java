@@ -15,10 +15,10 @@ public class UserDto implements UserDetails {
 	
 	String ROLE_PREFIX = "ROLE_";
 	
-	private String id;
-	private String role;
-	private String loginId;
-	private String password;
+	private String id;		//ID
+	private String role;	//역할(권한)
+	private String loginId;	//reqID
+	private String password;//Password 
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -62,15 +62,17 @@ public class UserDto implements UserDetails {
 	}
 
 
-	//TEST위하여 임시로 set 만들어둠 
+	// TODO TEST위하여 임시로 set 만들어둠 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
+	// TODO TEST위하여 임시로 set 만들어둠 
 	public void setUsername(String id) {
 		this.id = id;
 	}
 
+	// TODO TEST위하여 임시로 set 만들어둠 
 	public void setRole(String role) {
 		this.role = role;
 	}

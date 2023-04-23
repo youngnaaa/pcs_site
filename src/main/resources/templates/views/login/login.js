@@ -9,7 +9,7 @@ var app = new Vue({
 	method:{
 		login :function(){
 			alert("로그인 누름 ");
-			axios.post('/api/login', {})
+			axios.post('loginProc', {})
 			  .then(res => {
 			    console.log(res.data)
 			  });

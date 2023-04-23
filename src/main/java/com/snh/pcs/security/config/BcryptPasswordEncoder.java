@@ -6,6 +6,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
+/**
+ * 암호화
+ * @author hyuna
+ *
+ */
 public class BcryptPasswordEncoder {
 
   @Bean
