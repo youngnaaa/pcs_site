@@ -25,7 +25,7 @@ public class LogAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
 
-    @Around("within(com.snh.pcs..*)")
+    @Around("within(com.snh.pcs.view.*)")
     public Object logging(ProceedingJoinPoint pjp) throws Throwable {
 
         String params = getRequestParams();
